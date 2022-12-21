@@ -1,0 +1,14 @@
+<form #formAuth="ngForm">
+    <div class="form-group">
+        <label for="InputEmail">Adresse Mail</label>
+        <input ngModel type="email" #mail="ngModel" email name="email" class="form-control" id="InputEmail" required placeholder="Entrer email">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        <div class="alert alert-danger" *ngIf="mail.dirty && mail.invalid"> Please enter a valid email</div>
+    </div>
+    <div class="form-group">
+        <label for="InputPassword">Mot de passe</label>
+        <input ngModel #mdp="ngModel" type="password" name="password" class="form-control" required id="InputPassword" placeholder="Mot de passe" minlength="4">
+        <div class="alert alert-danger" *ngIf="mdp.touched && mdp.invalid"> Please enter a valid password</div>
+    </div>
+    <button [disabled]="formAuth.invalid" (click)="login(formAuth)" class="btn btn-primary">Se connecter</button>
+</form>

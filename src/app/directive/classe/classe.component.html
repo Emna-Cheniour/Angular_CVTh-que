@@ -1,0 +1,20 @@
+<p [ngClass]="{
+    'est':est,
+    'barca':barca,
+    'milan':milan
+}"
+>classe works!</p>
+<button class="btn btn-danger" (click)="changeTeam('est')">
+    Esperance
+</button>
+<button class="btn btn-danger" (click)="changeTeam('barca')">
+    Barcelone
+</button>
+<button class="btn btn-danger" (click)="changeTeam('milan')">
+    Milan
+</button>
+
+<div appHighlight>
+    Bonjour Directive
+</div>
+<input type="text" class="form-control" appRainbow>

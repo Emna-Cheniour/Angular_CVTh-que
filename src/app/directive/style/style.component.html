@@ -1,0 +1,14 @@
+<p [ngStyle]="{
+    'color':color,
+    'fontSize': size,
+    'font-family': font
+
+}">style works!</p>
+<input type="color" class="form-control color" [(ngModel)]="color">
+<input type="number" class="form-control" #sizeInput (change)="sizeChanged(sizeInput.value)">
+<select class="form-select" aria-label="Arial" [(ngModel)]="font">
+    <option selected value="Arial">Arial</option>
+    <option value="sans-serif" >Sans Serif</option>
+    <option value="Georgia">Georgia</option>
+    <option value="Verdana">Verdana</option>
+  </select>

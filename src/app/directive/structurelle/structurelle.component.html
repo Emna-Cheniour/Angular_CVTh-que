@@ -1,0 +1,8 @@
+<button class="btn btn-success" (click)="changeVisible()">Click-moi</button>
+<p *ngIf="click">La vie est belle ! </p>
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let personne of personnes">
+        Je suis {{personne.nom}} {{personne.prenom}} a {{personne.age}} et travaille {{personne.job}}
+
+    </li>
+</ul>

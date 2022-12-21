@@ -1,0 +1,16 @@
+<form #addform="ngForm">
+    <label for="firstname">Prénom:</label>
+    <input ngModel type="text" required id="firstname" name="firstname" class="form-control">
+    <label for="name">Nom:</label>
+    <input ngModel type="text" required id="name" name="name" class="form-control">
+    <label for="job">Métier:</label>
+    <input ngModel type="text" required id="job" name="job" class="form-control">
+    <label for="age">Age:</label>
+    <input ngModel min="0" max="120" type="text" required id="age" name="age" class="form-control">
+    <label for="cin">CIN:</label>
+    <input ngModel type="text" required id="cin" name="cin" class="form-control">
+    <label for="path">Image path</label>
+    <input ngModel type="text" id="path" name="path" class="form-control">
+    <br>
+    <button [disabled]="addform.invalid" (click)="addCv(addform)" class="btn btn-info"> Ajouter CV:</button>
+</form>

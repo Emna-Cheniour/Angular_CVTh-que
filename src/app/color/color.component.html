@@ -1,0 +1,14 @@
+<app-fils [filsProperty]="bgColor" (sendRequestToData)="getEvent($event)"></app-fils>
+<div [style.backgroundColor]="bgColor">
+    Color
+</div>
+<input 
+ [(ngModel)]="bgColor"
+ class="form-control" 
+ type="text" 
+ placeholder="Define your color"
+ >
+ <p>
+    Le contenu de la propriété color est {{bgColor}}
+</p>
+<a (click)="goToCv()">Go to CV</a>
